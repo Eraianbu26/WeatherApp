@@ -1,0 +1,156 @@
+:root {
+  --text-color: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.2);
+  --blur: blur(15px);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+background: url("../image/bgpaper.jpg") no-repeat center center/cover;
+  position: relative;
+  color: var(--text-color);
+}
+
+/* Dark overlay */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+/* Main card */
+.weather-app {
+  position: relative;
+  z-index: 1;
+
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--border-glass);
+
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 400px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+/* Input */
+input {
+  padding: 12px;
+  width: 85%;
+  font-size: 1rem;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+
+  color: white;
+  margin-top: 1rem;
+  outline: none;
+}
+
+/* Button */
+button {
+  margin-top: 22px;
+  padding: 20px 25px;
+
+  background: rgba(0, 0, 0, 0.7);
+  border: 0px solid #ffffff;
+  border-radius: 20px;
+
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  cursor: pointer;
+
+  backdrop-filter: blur(20px);
+  transition: 0.2s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.882);
+  color: black;
+}
+
+/* Weather result */
+.weather-result {
+  margin-top: 20px;
+}
+
+.weather-result img {
+  width: 80px;
+}
+
+/* Date */
+.date-time {
+  margin-top: 10px;
+  font-size:0.9rem;
+  color: #ddd;
+}
+
+/* Forecast section */
+.forecast-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Forecast cards */
+.forecast-day {
+  display: inline-block;
+  margin: 10px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
+  padding: 10px;
+  width: 100px;
+
+  font-size: 0.9rem;
+  color: white;
+
+  transition: transform 0.2s ease;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+}
+
+.forecast-day img {
+  width: 50px;
+}
+
+/* Extra info */
+.extra-info {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
