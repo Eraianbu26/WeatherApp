@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
 
-background: url("image/bgpaper.jpg") no-repeat center center/cover;
+background: url("bgpaper.jpg") no-repeat center center/cover;
   position: relative;
   color: var(--text-color);
 }
